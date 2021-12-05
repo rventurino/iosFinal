@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="meal.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <div id="options">
+        <h2>Lunch</h2>
+        <div id="img-box">
+            <img id="ham" src="class-img/lunch_ham.jpg" alt="">
+            <img id="sticks" src="class-img/lunch_sticks.jpg" alt="">
+            <img id="tenders" src="class-img/lunch_tenders.jpg" alt="">
+            <img id="wrap" src="class-img/lunch_wrap.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="selected">
+        <h2>Select An Item</h2>
+        <img src="" alt="">
+    </div>
+
+    <div id="nav">
+        <a href="index.html"><button>GO BACK</button></a>
+        <button>ADD TO ORDER</button>
+    </div>
+    
+    
+
+    <script>
+        let selected =document.getElementById("selected");
+        let menuPlaceHolder = "";
+
+        /* LUNCH PAGE */
+        document.getElementById("ham").addEventListener("click", selectedHam)
+        document.getElementById("sticks").addEventListener("click", selectedSticks)
+        document.getElementById("tenders").addEventListener("click", selectedTenders)
+        document.getElementById("wrap").addEventListener("click", selectedWrap)
+
+        function selectedHam(){
+            menuPlaceHolder = "ham";
+            selected.innerHTML = `<h2>You Chose Ham Sandwich</h2> <img src='class-img/lunch_ham.jpg' >`;
+        }
+
+        function selectedSticks(){
+            menuPlaceHolder = "sticks";
+            selected.innerHTML = `<h2>You Chose Moz Sticks</h2> <img src='class-img/lunch_sticks.jpg' >`;
+        }
+
+        function selectedTenders(){
+            menuPlaceHolder = "tenders";
+            selected.innerHTML = `<h2>You Chose Chicken Tenders</h2> <img src='class-img/lunch_tenders.jpg' >`;
+        }
+
+        function selectedWrap(){
+            menuPlaceHolder = "wrap";
+            selected.innerHTML = `<h2>You Chose Wrap</h2> <img src='class-img/lunch_wrap.jpg' >`;
+        }
+        /* END LUNCH PAGE */
+    
+    </script>
+</body>
+</html>
